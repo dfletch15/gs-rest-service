@@ -23,6 +23,6 @@ steps:
     goals: 'package'
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Pipeline.Workspace)/target/rest-service-0.0.1-SNAPSHOT.jar'
-    artifact: 'simple-app.jar'
+    targetPath: '$(Pipeline.Workspace)/target/rest-service-0.0.1-SNAPSHOT'
+    artifact: 'simple-app artifact'
     publishLocation: 'pipeline'
