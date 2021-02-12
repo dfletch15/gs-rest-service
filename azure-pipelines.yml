@@ -23,5 +23,5 @@ steps:
     goals: 'package'
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Pipeline.Workspace)/target/rest-service-0.0.1-SNAPSHOT.jar'
+    targetPath: '**/target/rest-service-0.0.1-SNAPSHOT.jar'
     publishLocation: 'pipeline'
