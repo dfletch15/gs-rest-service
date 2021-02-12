@@ -20,3 +20,13 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'aa-corp-nonprod-spoke'
+    appType: 'webAppLinux'
+    WebAppName: 'simple-app'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'cor-d-zeaus-ra-finpcsvcs-rg'
+    SlotName: 'production'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
